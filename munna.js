@@ -1,25 +1,6 @@
 
 
 
-
-
-
-function show() {
-    const show = document.getElementById("show");
-    const myForm = document.getElementById("myform").value;
-
-
-show.innerHTML = myForm
-
-}
-
-
-const btn = document.getElementById('btn')
-
-
-btn.addEventListener('click', show)
-
-
 // //formvalidation exam one
 // function validateform() {
 //     const form = document.forms["myForm"]
