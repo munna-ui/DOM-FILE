@@ -181,20 +181,21 @@
 
 
 
-//windo object settimeout and setinterval use
-let btn = document.getElementById("btn")
-console.log(btn);
-let show = document.getElementById("show")
-let x;
-function clickHere() {
-        
-         x =  setInterval(function () {
-              show.innerHTML = new Date().toLocaleTimeString()
-        }, 1000)        
-}
 
-function stopHere() {
-        clearInterval(x)
-}
+
+// //windo object settimeout and setinterval use
+// let btn = document.getElementById("btn")
+// console.log(btn);
+// let show = document.getElementById("show")
+// let x;
+// function clickHere() {    
+//          x =  setInterval(function () {
+//               show.innerHTML = new Date().toLocaleTimeString()
+//         }, 1000)        
+// }
+
+// function stopHere() {
+//         clearInterval(x)
+// }
 
 
