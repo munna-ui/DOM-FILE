@@ -174,10 +174,9 @@
     // parent.replaceChild(newElement, childOne)
 
 
-    
-//   const value = document.getElementsByClassName('txt')
+    //   const value = document.getElementsByClassName('txt')
 
-//   console.dir(value['three'].innerHTML)
+    //   console.dir(value['three'].innerHTML)
 
 
 
@@ -199,3 +198,104 @@
 // }
 
 
+
+
+
+// Wab API 
+//Wab API এর forms API এর ব্যবহার এটা খুব  একটা ব্যবহার হয় না । এই সকল কাজের জন্য libary ব্যবহার করা হয় ।
+
+
+
+
+
+// function validation() {
+//     const inputNum = document.querySelector("#num");
+//     const show = document.querySelector("#show");
+
+//     if (inputNum.validity.rangeOverflow) {
+
+//         inputNum.setCustomValidity("!error you value is overflow ")
+        
+//     } else if (inputNum.validity.rangeUnderflow){
+//         inputNum.setCustomValidity("!error, your  value is underflow")
+        
+//     }else if(inputNum.validity.valueMissing){
+//         inputNum.setCustomValidity("!error, your number is emry")
+//     }
+
+//     if(!inputNum.checkValidity()){
+//         show.innerHTML = inputNum.validationMessage
+//     }
+// }
+
+
+
+
+
+
+
+
+    //Wap API  storage API Use localstorage টা স্থায়ী sessionstorage টা অস্থায়ী কিন্তু দুইটাই window object এর under এ থাকে
+
+    // function setLocalStorage(key, value) {
+    //     localStorage.setItem(key, value)
+    // }
+
+
+    // function getLocalStorage(key) {
+    //     alert(localStorage.getItem(key))
+    // }
+
+
+
+    // function removeLocalStorage(key){
+    //     localStorage.removeItem(key)
+    // }
+
+
+    // function clearLocalStorage() {
+    //     localStorage.clear()
+    // }
+
+
+
+    //workers API এটা খুবই প্রয়োজনীয়, এই কাজটি করার জন্য আমাকে আর একটা .JS ফাইল নেয়া হয়েছে
+
+
+//     let work;
+
+//     function startWorker() {
+//         if(typeof Worker !== "undefind"){  //browser support করে কিনা দেখা হয়েছে
+//             if (typeof work == 'undefined') {
+//                 work = new Worker('worker.js')      //worker create
+//             }
+
+
+//             work.onmessage = function (event) {         //যখন worker এর কাজ শেষ হবে তখন onmessage listening করছে সে ফলাফল টা পাবে আর কথন কাজ করা শুরু করবে এবং event.data এর মধ্যে result টা আছে।
+//                 document.querySelector("#show").innerHTML = event.data;
+//             }
+
+//         }else{
+//             alert("your browser does not support web worker!");
+//         }
+        
+//     }
+
+
+// function stopWork() {
+//     if (typeof Worker !== "undefined") {
+//         work.terminate();
+//         work = undefined;
+//     } 
+// }
+
+
+function start() {
+    let worker = new Worker('worker.js');
+
+    worker.onmessage = function (event) {
+        document.getElementById("show").innerHTML = event.data
+        
+    }
+
+}
