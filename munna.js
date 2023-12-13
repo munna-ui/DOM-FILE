@@ -259,6 +259,10 @@
 
 
 
+
+
+
+    
     //workers API এটা খুবই প্রয়োজনীয়, এই কাজটি করার জন্য আমাকে আর একটা .JS ফাইল নেয়া হয়েছে
 
 
@@ -290,12 +294,37 @@
 // }
 
 
-function start() {
-    let worker = new Worker('worker.js');
 
-    worker.onmessage = function (event) {
-        document.getElementById("show").innerHTML = event.data
-        
-    }
+// workers API এটা আমি নিজে করেছি
+// function start() {
+//     let worker = new Worker('worker.js');
+//     worker.onmessage = function (event) {
+//         document.getElementById("show").innerHTML = event.data        
+//     }
+// }
 
-}
+
+
+
+
+
+
+//fetch API 
+
+// const show = document.getElementById('show')
+
+// async function getData() {
+
+//     // const reg = await fetch("http://127.0.0.1:5500/data.txt") //async function behaviars way two and it's better
+//     // const data = await reg.text()
+//     // show.innerText = data
+
+
+//     // fetch('http://127.0.0.1:5500/data.txt')      //promise function behaviars way one
+//     //     .then(function (reg) {
+//     //     return reg.text()
+//     // })
+//     //     .then(function (data) {
+//     //         show.innerText = data
+//     //     });
+// }
