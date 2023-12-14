@@ -309,13 +309,13 @@
 
 
 
-//fetch API 
+//fetch API important
 
 // const show = document.getElementById('show')
 
 // async function getData() {
 
-//     // const reg = await fetch("http://127.0.0.1:5500/data.txt") //async function behaviars way two and it's better
+//     // const reg = await fetch("http://127.0.0.1:5500/data.txt") //async function behaviars way two and it's better নিজের কোনো file বা folder থেকে data নিয়ে আসার জন্য fetch API ব্যবহার করা হয়ে থাকে
 //     // const data = await reg.text()
 //     // show.innerText = data
 
@@ -328,3 +328,64 @@
 //     //         show.innerText = data
 //     //     });
 // }
+
+
+
+
+
+
+
+
+
+//Geolocation API not importace
+
+
+// const display = document.getElementById('display')
+
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition)
+        
+//     }else{
+//         display.innerHTML("Geolocation is not available in your device")
+//     }
+// }
+
+// function showPosition(position) {
+//  display.innerHTML = "Latituda: " + "<br/>Logitude: " + position.coords.latitude + "<br/>Longitude: " + position.coords.logitude;    
+// }
+
+
+
+
+
+
+
+        // XMLhttp series
+//XMLhttp request this is more important
+
+
+
+
+// function getData() {            //server থেকে কোনো data নিয়ে আসা ডাটা পাঠানো বা আপডেট করা কাজে XMLhttp request ব্যবহার করা হয়
+
+//     //create new request
+//     const xhr = new XMLHttpRequest()
+    
+
+//     //what to do response arrives
+//     xhr.onload =function () {
+//         const show = document.getElementById('show')
+//         show.innerHTML = xhr.responseText;
+//     }
+
+
+//     //premare request - methods: GET, POST, PUT, PATCH. DELETE, OPTIONS
+
+//     xhr.open("GET", "http://127.0.0.1:5500/DOM-FILE/xhr/xhrdata.txt");
+
+
+//     // request send করা 
+//     xhr.send();
+// }
+
